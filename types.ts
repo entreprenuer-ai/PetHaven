@@ -37,22 +37,11 @@ export interface CartItem {
 export interface Order {
   id: string;
   customerName: string;
-  email: string;
   items: CartItem[];
   total: number;
   status: 'pending' | 'processing' | 'shipped' | 'delivered';
   date: string;
-}
-
-export interface Booking {
-  id: string;
-  customerName: string;
   email: string;
-  date: string;
-  time: string;
-  purpose: 'visit_pet' | 'pickup' | 'consultation';
-  notes?: string;
-  status: 'pending' | 'confirmed' | 'cancelled';
 }
 
 export interface ChatMessage {
